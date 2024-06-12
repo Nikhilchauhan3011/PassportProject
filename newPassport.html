@@ -11,6 +11,52 @@
 </head>
 <body>
 
+    <header>
+
+        <nav class="navbar bg-secondary navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="home.html">
+                <img src="digiind.webp" class="img-fluid" style=" height: 3em;" alt="indian government logo">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="newPassport.html">Apply for New Passport</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="status.html">View Application Status</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="reissue.html">Re-Issue Passport</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="payment.html">Payment Details</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="feedback.html">Contact us</a>
+                  </li>
+                
+                </ul>
+
+                <form class="d-flex" role="search">
+                    <button class="btn btn-outline-secondary" type="logout"><a href="index.html" style="text-decoration: none;">Logout</a></button>
+                  </form>
+              </div>
+            </div>
+          </nav>
+
+    </header>
+   
+
     <div class="container mt-4">
     <p class="fs-2">Apply for New Passport</p>
     <form action="#" method="post">
@@ -208,58 +254,73 @@
     </fieldset>
 
 
-    <fieldset>
-        <legend> Family Details</legend>
-        <label for="father_name" class="form-label">Father's Given Name:</label><br>
-        <input type="text" id="father_name" name="father_name" required><br><br>
-
-        <label for="father_surname" class="form-label">Father's Surname:</label><br>
-        <input type="text" id="father_surname" name="father_surname" required><br><br>
-
-        <label for="mother_name" class="form-label">Mother's Given Name:</label><br>
-        <input type="text" id="mother_name" name="mother_name" required><br><br>
-
-        <label for="mother_surname" class="form-label">Mother's Surname:</label><br>
-        <input type="text" id="mother_surname" name="mother_surname" required><br><br>
-
-        <label for="legal_guardian_name" class="form-label">Legal Guardian's Name (if applicable):</label><br>
-        <input type="text" id="legal_guardian_name" name="legal_guardian_name"><br><br>
-
-        <label for="spouse_name" class="form-label">Spouse's Given Name (if married):</label><br>
-        <input type="text" id="spouse_name" name="spouse_name"><br><br>
-
-        <label for="spouse_surname" class="form-label">Spouse's Surname (if married):</label><br>
-        <input type="text" id="spouse_surname" name="spouse_surname"><br><br>
-
-    </fieldset>
+    <fieldset class="border p-3 rounded">
+        <legend class="text-center">Family Details</legend>
+        <div class="row">
+          <div class="mb-3 col-md-6">
+            <label for="father_name" class="form-label">Father's Given Name:</label>
+            <input type="text" class="form-control" id="father_name" name="father_name" required>
+          </div>
+          <div class="mb-3 col-md-6">
+            <label for="father_surname" class="form-label">Father's Surname:</label>
+            <input type="text" class="form-control" id="father_surname" name="father_surname" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="mb-3 col-md-6">
+            <label for="mother_name" class="form-label">Mother's Given Name:</label>
+            <input type="text" class="form-control" id="mother_name" name="mother_name" required>
+          </div>
+          <div class="mb-3 col-md-6">
+            <label for="mother_surname" class="form-label">Mother's Surname:</label>
+            <div class="form-control" id="mother_surname" name="mother_surname" required>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="legal_guardian_name" class="form-label">Legal Guardian's Name (if applicable):</label>
+          <input type="text" class="form-control" id="legal_guardian_name" name="legal_guardian_name">
+        </div>
+        <div class="row">
+          <div class="mb-3 col-md-6">
+            <label for="spouse_name" class="form-label">Spouse's Given Name (if married):</label>
+            <input type="text" class="form-control" id="spouse_name" name="spouse_name">
+          </div>
+          <div class="mb-3 col-md-6">
+            <label for="spouse_surname" class="form-label">Spouse's Surname (if married):</label>
+            <input type="text" class="form-control" id="spouse_surname" name="spouse_surname">
+          </div>
+        </div>
+      </fieldset>
+      
 
 
     <fieldset>
 
         <Legend> Address Details</Legend>
         <label for="present_address" class="form-label">Present Residential Address:</label><br>
-        <input type="text" id="present_address" name="present_address" required><br><br>
+        <input type="text" id="present_address" class="form-control" name="present_address" required><br><br>
 
         <label for="village_town_city" class="form-label">Village/ Town/ City:</label><br>
-        <input type="text" id="village_town_city" name="village_town_city" required><br><br>
+        <input type="text" id="village_town_city"  class="form-control" name="village_town_city" required><br><br>
 
         <label for="district" class="form-label">District:</label><br>
-        <input type="text" id="district" name="district" required><br><br>
+        <input type="text" id="district" class="form-control" name="district" required><br><br>
 
         <label for="state_ut" class="form-label">State/ UT:</label><br>
-        <input type="text" id="state_ut" name="state_ut" required><br><br>
+        <input type="text" id="state_ut" class="form-control" name="state_ut" required><br><br>
 
         <label for="pincode" class="form-label">Pincode:</label><br>
-        <input type="text" id="pincode" name="pincode" required><br><br>
+        <input type="text" id="pincode"  class="form-control" name="pincode" required><br><br>
 
         <label for="mobile_number" class="form-label">Mobile Number:</label><br>
-        <input type="text" id="mobile_number" name="mobile_number" required><br><br>
+        <input type="text" id="mobile_number" class="form-control" name="mobile_number" required><br><br>
 
         <label for="telephone_number" class="form-label">Telephone Number:</label><br>
-        <input type="text" id="telephone_number" name="telephone_number"><br><br>
+        <input type="text" id="telephone_number"  class="form-control" name="telephone_number"><br><br>
 
         <label for="email" class="form-label">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" class="form-control"  name="email" required><br><br>
 
         <label for="permanent_address" class="form-label">Is your permanent address same as above?</label><br>
         <input type="radio" id="permanent_address_yes" name="permanent_address" value="Yes" required>
@@ -268,38 +329,26 @@
         <label for="permanent_address_no" class="form-label">No</label><br><br>
 
         <label for="emergency_contact_name" class="form-label">Emergency Contact Person's Name:</label><br>
-        <input type="text" id="emergency_contact_name" name="emergency_contact_name" required><br><br>
+        <input type="text" id="emergency_contact_name" class="form-control" name="emergency_contact_name" required><br><br>
 
         <label for="emergency_contact_number" class="form-label">Emergency Contact Number:</label><br>
-        <input type="text" id="emergency_contact_number" name="emergency_contact_number" required><br><br>
+        <input type="text" id="emergency_contact_number" class="form-control" name="emergency_contact_number" required><br><br>
 
         <label for="emergency_contact_address" class="form-label">Emergency Contact Address:</label><br>
-        <input type="text" id="emergency_contact_address" name="emergency_contact_address" required><br><br>
+        <input type="text" id="emergency_contact_address" class="form-control" name="emergency_contact_address" required><br><br>
 
         <label for="passport_number" class="form-label">Previous Passport Number (if applicable):</label><br>
-        <input type="text" id="passport_number" name="passport_number"><br><br>
+        <input type="text" id="passport_number" class="form-control" name="passport_number"><br><br>
 
         <label for="passport_issue_date" class="form-label">Date of Issue (DD-MM-YYYY):</label><br>
-        <input type="text" id="passport_issue_date" name="passport_issue_date"><br><br>
+        <input type="text" id="passport_issue_date" class="form-control" name="passport_issue_date"><br><br>
 
         <label for="passport_issue_place" class="form-label">Place of Issue:</label><br>
-        <input type="text" id="passport_issue_place" name="passport_issue_place"><br><br>
+        <input type="text" id="passport_issue_place" class="form-control" name="passport_issue_place"><br><br>
 
     </fieldset>
 
 
-
-    <fieldset>
-
-    <legend> Previous Passport/ Application Details</legend>
-    <label for="passport_number" class="form-label">Previous Passport Number (if any):</label><br>
-    <input type="text" id="passport_number" name="passport_number"><br><br>
-    <label for="passport_issue_date" class="form-label">Date of Issue (DD-MM-YYYY):</label><br>
-    <input type="date" id="passport_issue_date" name="passport_issue_date"><br><br>
-    <label for="passport_issue_place" class="form-label">Place of Issue:</label><br>
-    <input type="text" id="passport_issue_place" name="passport_issue_place"><br><br>
-
-</fieldset>
 
 <fieldset>
 <legend> Other Details</legend>
@@ -336,45 +385,50 @@
 </fieldset>
 
 <fieldset>
-
-<legend> Self-Declaration</legend>
-<label for="self_declaration" class="form-label">I owe allegiance to the sovereignty, unity, and integrity of India, and have not voluntarily acquired citizenship or travel documents of any other country. I have never held any passport under any other name or nationality:</label><br>
-<input type="checkbox" id="self_declaration" name="self_declaration" required>
-<label for="self_declaration" class="form-label">I Agree</label><br><br>
-
+    <legend>Self-Declaration</legend>
+    <div class="form-group">
+        <label for="declarationText">I hereby declare that:</label>
+        <textarea class="form-control" id="declarationText" name="declarationText" rows="5" readonly>
+1. I owe allegiance to the sovereignty, unity, and integrity of India, and have not voluntarily acquired the citizenship or travel document of another country.
+2. I have not been issued a passport or travel document before, or if issued, it is attached and there is no current or pending investigation against me.
+3. I have not been convicted by any court of law for any criminal offense, or if convicted, details are attached.
+4. No proceedings in respect of an offense alleged to have been committed by me are pending before a criminal court in India.
+5. No warrant or summons for my appearance, and no warrant for my arrest, has been issued by a court under any law in force in India.
+6. No valid court order prohibiting my departure from India is in force.
+7. No declaration of me as a proclaimed offender has been issued or subsists.
+8. I am not engaged in activities prejudicial to the sovereignty, unity, and integrity of India.
+9. I have not submitted any application for obtaining a passport under this or any other name.
+10. I solemnly affirm that the information given in this application is true and correct to the best of my knowledge and belief, and I am aware that it is an offense under the Passport Act, 1967, to furnish false information or suppress material information.
+        </textarea>
+    </div>
+    <div class="form-group">
+        <label for="signature">Upload Signature:</label>
+        <input type="file" class="form-control-file" id="signature" name="signature" required>
+    </div>
+    <div class="form-group">
+        <label for="declarationDate">Date:</label>
+        <input type="date" class="form-control" id="declarationDate" name="declarationDate" required>
+    </div>
 </fieldset>
 
-<fieldset>
-<legend> Enclosures</legend>
-<label for="enclosures" class="form-label">Please attach the following documents (if applicable):</label><br>
-<label for="enclosure_birth_certificate" class="form-label">Birth Certificate</label><br>
-<label for="enclosure_aadhaar" class="form-label">Aadhaar Card</label><br>
-<label for="enclosure_pan_card" class="form-label">PAN Card</label><br>
-<label for="enclosure_voter_id" class="form-label">Voter ID</label><br>
-<label for="enclosure_previous_passport" class="form-label">Previous Passport</label><br><br>
-<input type="file" id="enclosure_previous_passport" name="enclosure_previous_passport"><br><br>
-</fieldset>
 
 
-<fieldset>
-<legend> Payment Details</legend>
-<label for="payment_mode" class="form-label">Mode of Payment:</label><br>
-<select id="payment_mode" name="payment_mode" required>
-    <option value="Net Banking">Net Banking</option>
-    <option value="Credit Card">Credit Card</option>
-    <option value="Debit Card">Debit Card</option>
-    <option value="UPI">UPI</option>
-</select><br><br>
-
-<label for="payment_reference" class="form-label">Payment Reference Number:</label><br>
-<input type="text" id="payment_reference" name="payment_reference" required><br><br>
-</fieldset>
 <br>
-<input type="submit" value="Apply">
+<input type="submit"  class="btn btn-success" value="Apply">
 </form>
 
 
+
 </div>
+
+<footer class="bg-secondary text-center text-white">
+        
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        <p>&copy;2024 Passport Application System. All rights reserved</p>
+        
+    </div>
+    
+  </footer>
 </body>
 </html>
 
