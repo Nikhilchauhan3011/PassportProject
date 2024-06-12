@@ -1,84 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payment Page</title>
-</head>
-<body>
-    <h1>Payment Page</h1>
-    <form action="#" method="post">
-        
-        <fieldset>
-            <legend>Personal Information</legend>
-            
-            <label for="fullName">Full Name:</label>
-            <input type="text" id="fullName" name="fullName" required><br><br>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            
-            <label for="phoneNumber">Phone Number:</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" required><br><br>
-        </fieldset>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
 
-        
-        <fieldset>
-            <legend>Payment Method</legend>
-            
-            <label for="paymentMethod">Select Payment Method:</label>
-            <select id="paymentMethod" name="paymentMethod" required>
-                <option value="">--Please choose an option--</option>
-                <option value="creditCard">Credit/Debit Card</option>
-                <option value="paypal">PayPal</option>
-                <option value="googlePay">Google Pay</option>
-                <option value="applePay">Apple Pay</option>
-                <option value="upi">UPI</option>
-            </select><br><br>
-        </fieldset>
-
-        
-        <fieldset>
-            <legend>Credit/Debit Card Information</legend>
-
-            <label for="cardNumber">Card Number:</label>
-            <input type="text" id="cardNumber" name="cardNumber" pattern="\d{16}" title="Please enter a valid 16-digit card number"><br><br>
-            
-            <label for="expirationDate">Expiration Date:</label>
-            <input type="month" id="expirationDate" name="expirationDate"><br><br>
-            
-            <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv" pattern="\d{3}" title="Please enter a valid 3-digit CVV"><br><br>
-        </fieldset>
 
    
-        <fieldset>
-            <legend>PayPal</legend>
-            <p>You will be redirected to PayPal to complete your registration.</p>
-        </fieldset>
+    <header>
 
-      
-        <fieldset>
-            <legend>Google Pay</legend>
-            <p>You will be redirected to Google Pay to complete your registration.</p>
-        </fieldset>
+        <nav class="navbar bg-secondary navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="home.html">
+                <img src="digiind.webp" class="img-fluid" style=" height: 3em;" alt="indian government logo">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="newPassport.html">Apply for New Passport</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="status.html">View Application Status</a>
+                  </li>
 
-   
-        <fieldset>
-            <legend>Apple Pay</legend>
-            <p>You will be redirected to Apple Pay to complete your registration.</p>
-        </fieldset>
+                  <li class="nav-item">
+                    <a class="nav-link" href="reissue.html">Re-Issue Passport</a>
+                  </li>
 
+                  <li class="nav-item">
+                    <a class="nav-link" href="payment.html">Payment Details</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="feedback.html">Contact us</a>
+                  </li>
+                
+                </ul>
+
+                <form class="d-flex" role="search">
+                    <button class="btn btn-outline-secondary" type="logout"><a href="index.html" style="text-decoration: none;">Logout</a></button>
+                  </form>
+              </div>
+            </div>
+          </nav>
+
+    </header>
     
-        <fieldset>
-            <legend>UPI</legend>
-            
-            <label for="upiID">UPI ID:</label>
-            <input type="text" id="upiID" name="upiID" pattern="^[\w.-]+@[\w.-]+$" title="Please enter a valid UPI ID"><br><br>
-        </fieldset>
 
-      
-        <button type="submit">Submit Payment</button>
-    </form>
-</body>
+    <div class="container mt-5">
+      <h1>Payment Page</h1>
+      <form action="#" method="post">
+        <fieldset class="mb-4">
+          <legend>Personal Information</legend>
+          <div class="mb-3">
+            <label for="fullName" class="form-label">Full Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="fullName"
+              name="fullName"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="phoneNumber" class="form-label">Phone Number:</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="phoneNumber"
+              name="phoneNumber"
+              required
+            />
+          </div>
+        </fieldset>
+        <fieldset class="mb-4">
+          <legend>Payment Method</legend>
+          <div class="mb-3">
+            <label for="paymentMethod" class="form-label"
+              >Select Payment Method:</label
+            >
+            <select
+              id="paymentMethod"
+              class="form-select"
+              name="paymentMethod"
+              required
+            >
+              <option value="">--Please choose an option--</option>
+              <option value="creditCard">Credit/Debit Card</option>
+              <option value="paypal">PayPal</option>
+              <option value="googlePay">Google Pay</option>
+              <option value="applePay">Apple Pay</option>
+              <option value="upi">UPI</option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset class="mb-4">
+          <legend>Credit/Debit Card Information</legend>
+          <div class="mb-3">
+            <label for="cardNumber" class="form-label">Card Number:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cardNumber"
+              name="cardNumber"
+              pattern="\d{16}"
+              title="Please enter a valid 16-digit card number"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="expirationDate" class="form-label"
+              >Expiration Date:</label
+            >
+            <input
+              type="month"
+              class="form-control"
+              id="expirationDate"
+              name="expirationDate"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="cvv" class="form-label">CVV:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cvv"
+              name="cvv"
+              pattern="\d{3}"
+              title="Please enter a valid 3-digit CVV"
+            />
+          </div>
+        </fieldset>
+        <fieldset class="mb-4">
+          <legend>PayPal</legend>
+          <p>You will be redirected to PayPal to complete your registration.</p>
+        </fieldset>
+        <fieldset class="mb-4">
+          <legend>Google Pay</legend>
+          <p>
+            You will be redirected to Google Pay to complete your registration.
+          </p>
+        </fieldset>
+        <fieldset class="mb-4">
+          <legend>Apple Pay</legend>
+          <p>
+            You will be redirected to Apple Pay to complete your registration.
+          </p>
+        </fieldset>
+        <fieldset class="mb-4">
+          <legend>UPI</legend>
+          <div class="mb-3">
+            <label for="upiID" class="form-label">UPI ID:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="upiID"
+              name="upiID"
+              pattern="^[\w.-]+@[\w.-]+$"
+              title="Please enter a valid UPI ID"
+            />
+          </div>
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Submit Payment</button>
+      </form>
+    </div>
+
+    <footer class="bg-secondary text-center text-white">
+        
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            <p>&copy;2024 Passport Application System. All rights reserved</p>
+            
+        </div>
+        
+      </footer>
+
+  
+  </body>
 </html>
