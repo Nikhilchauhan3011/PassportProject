@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+</head>
+<body>
+    <h1>Payment Page</h1>
+    <form action="#" method="post">
+        
+        <fieldset>
+            <legend>Personal Information</legend>
+            
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required><br><br>
+        </fieldset>
+
+        
+        <fieldset>
+            <legend>Payment Method</legend>
+            
+            <label for="paymentMethod">Select Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="">--Please choose an option--</option>
+                <option value="creditCard">Credit/Debit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="googlePay">Google Pay</option>
+                <option value="applePay">Apple Pay</option>
+                <option value="upi">UPI</option>
+            </select><br><br>
+        </fieldset>
+
+        
+        <fieldset>
+            <legend>Credit/Debit Card Information</legend>
+
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" pattern="\d{16}" title="Please enter a valid 16-digit card number"><br><br>
+            
+            <label for="expirationDate">Expiration Date:</label>
+            <input type="month" id="expirationDate" name="expirationDate"><br><br>
+            
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" pattern="\d{3}" title="Please enter a valid 3-digit CVV"><br><br>
+        </fieldset>
+
+   
+        <fieldset>
+            <legend>PayPal</legend>
+            <p>You will be redirected to PayPal to complete your registration.</p>
+        </fieldset>
+
+      
+        <fieldset>
+            <legend>Google Pay</legend>
+            <p>You will be redirected to Google Pay to complete your registration.</p>
+        </fieldset>
+
+   
+        <fieldset>
+            <legend>Apple Pay</legend>
+            <p>You will be redirected to Apple Pay to complete your registration.</p>
+        </fieldset>
+
+    
+        <fieldset>
+            <legend>UPI</legend>
+            
+            <label for="upiID">UPI ID:</label>
+            <input type="text" id="upiID" name="upiID" pattern="^[\w.-]+@[\w.-]+$" title="Please enter a valid UPI ID"><br><br>
+        </fieldset>
+
+      
+        <button type="submit">Submit Payment</button>
+    </form>
+</body>
+</html>

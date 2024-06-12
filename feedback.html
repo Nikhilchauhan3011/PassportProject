@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Passport Application Complaint/Feedback</title>
+</head>
+<body>
+    <h1>Passport Application Complaint/Feedback</h1>
+
+    <!-- Complaint/Feedback Form Section -->
+    <fieldset>
+        <legend>Submit Your Complaint or Feedback</legend>
+        <form>
+            <!-- Personal Details -->
+            <label>
+                Full Name: <input type="text" name="full_name" required>
+            </label><br><br>
+            <label>
+                Date of Birth (DD-MM-YYYY): <input type="date" name="dob" required>
+            </label><br><br>
+            <label>
+                Passport Application Reference Number: <input type="text" name="reference_number">
+            </label><br><br>
+
+            <!-- Contact Details -->
+            <label>
+                Email ID: <input type="email" name="email" required>
+            </label><br><br>
+            <label>
+                Mobile Number: <input type="text" name="mobile" required>
+            </label><br><br>
+
+            <!-- Complaint/Feedback Details -->
+            <label>
+                Subject: <input type="text" name="subject" required>
+            </label><br><br>
+            <label>
+                Type:
+                <select name="type" required>
+                    <option value="complaint">Complaint</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+            </label><br><br>
+            <label>
+                Details: <textarea name="details" rows="10" cols="50" required></textarea>
+            </label><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </fieldset>
+</body>
+</html>
