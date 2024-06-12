@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Passport Renewal Application Form</title>
+</head>
+<body>
+    <h1>Passport Renewal Application Form</h1>
+    <form>
+        <!-- Service Required Section -->
+        <fieldset>
+            <legend>1. Service Required</legend>
+            <label>
+                <input type="radio" name="service" value="fresh" required> Applying for Fresh Passport
+            </label>
+            <label>
+                <input type="radio" name="service" value="reissue" required> Re-issue of Passport
+            </label>
+
+            <p>If re-issue, specify reason(s):</p>
+            <select name="reason" required>
+                <option value="validity_expired_within_3_years">Validity Expired within 3 years/ Due to Expire</option>
+                <option value="exhaustion_of_pages">Exhaustion of Pages</option>
+                <option value="validity_expired_more_than_3_years_ago">Validity Expired more than 3 years ago</option>
+                <option value="lost_passport">Lost Passport</option>
+                <option value="change_in_existing_personal_particulars">Change in Existing Personal Particulars</option>
+                <option value="damaged_passport">Damaged Passport</option>
+            </select>
+
+            <p>If change in existing personal particulars, specify reason(s):</p>
+            <select name="change_reason" required>
+                <option value="appearance">Appearance</option>
+                <option value="signature">Signature</option>
+                <option value="given_name">Given Name</option>
+                <option value="surname">Surname</option>
+                <option value="dob">Date of Birth</option>
+                <option value="spouse_name">Spouse Name</option>
+                <option value="address">Address</option>
+                <option value="delete_ecr">Delete ECR</option>
+                <option value="others">Others, Please specify</option>
+            </select>
+
+            <p>Type of Application:</p>
+            <label>
+                <input type="radio" name="application_type" value="normal" required> Normal
+            </label>
+            <label>
+                <input type="radio" name="application_type" value="tatkaal" required> Tatkaal
+            </label>
+
+            <p>Type of Passport Booklet:</p>
+            <label>
+                <input type="radio" name="booklet_type" value="36_pages" required> 36 Pages
+            </label>
+            <label>
+                <input type="radio" name="booklet_type" value="60_pages" required> 60 Pages
+            </label>
+
+            <p>Validity Required:</p>
+            <label>
+                <input type="radio" name="validity" value="10_years" required> 10 Years
+            </label>
+            <label>
+                <input type="radio" name="validity" value="up_to_age_18" required> Up to age 18
+            </label>
+        </fieldset>
+
+        <!-- Applicant Details Section -->
+        <fieldset>
+            <legend>2. Applicant Details</legend>
+            <label>
+                Given Name: <input type="text" name="given_name" required>
+            </label><br>
+            <label>
+                Surname: <input type="text" name="surname" required>
+            </label><br>
+            <label>
+                Are you known by any other names (aliases)? 
+                <input type="radio" name="aliases" value="yes"> Yes
+                <input type="radio" name="aliases" value="no"> No
+            </label><br>
+            <label>
+                Have you ever changed your name? 
+                <input type="radio" name="changed_name" value="yes"> Yes
+                <input type="radio" name="changed_name" value="no"> No
+            </label><br>
+            <label>
+                Date of Birth (DD-MM-YYYY): <input type="date" name="dob" required>
+            </label><br>
+            <label>
+                Place of Birth: <input type="text" name="birth_place" required>
+            </label><br>
+            <label>
+                District (If born in India): <input type="text" name="birth_district" required>
+            </label><br>
+            <label>
+                State/UT (If born in India): <input type="text" name="birth_state" required>
+            </label><br>
+            <label>
+                Region/Country (If born abroad): <input type="text" name="birth_country" required>
+            </label><br>
+            <label>
+                Gender:
+                <select name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="transgender">Transgender</option>
+                </select>
+            </label><br>
+            <label>
+                Marital Status:
+                <select name="marital_status" required>
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                    <option value="divorced">Divorced</option>
+                    <option value="widow_widower">Widow/Widower</option>
+                    <option value="separated">Separated</option>
+                </select>
+            </label><br>
+            <label>
+                Citizenship of India by:
+                <select name="citizenship" required>
+                    <option value="birth">Birth</option>
+                    <option value="descent">Descent</option>
+                    <option value="registration_naturalization">Registration/Naturalization</option>
+                </select>
+            </label><br>
+            <label>
+                PAN (If available): <input type="text" name="pan">
+            </label><br>
+            <label>
+                Voter ID (If available): <input type="text" name="voter_id">
+            </label><br>
+            <label>
+                Employment Type:
+                <select name="employment" required>
+                    <option value="psu">PSU</option>
+                    <option value="government">Government</option>
+                    <option value="statutory_body">Statutory Body</option>
+                    <option value="retired_government_servant">Retired Government Servant</option>
+                    <option value="self_employed">Self Employed</option>
+                    <option value="private">Private</option>
+                    <option value="homemaker">Homemaker</option>
+                    <option value="not_employed">Not Employed</option>
+                    <option value="retired_private_service">Retired-Private Service</option>
+                    <option value="student">Student</option>
+                    <option value="others">Others</option>
+                </select>
+            </label><br>
+            <label>
+                If employed in Government/Statutory Body/PSU, specify organization name: 
+                <input type="text" name="organization">
+            </label><br>
+            <label>
+                Is either of your parent (in case of minor)/spouse, a government servant?
+                <input type="radio" name="parent_spouse_govt" value="yes"> Yes
+                <input type="radio" name="parent_spouse_govt" value="no"> No
+            </label><br>
+            <label>
+                Educational Qualification:
+                <select name="education" required>
+                    <option value="7th_pass_or_less">7th pass or less</option>
+                    <option value="8th_9th_standard">Between 8th and 9th Standard</option>
+                    <option value="10th_pass_and_above">10th pass and above</option>
+                    <option value="graduate_and_above">Graduate and above</option>
+                </select>
+            </label><br>
+            <label>
+                Are you eligible for Non-ECR category?
+                <input type="radio" name="non_ecr" value="yes"> Yes
+                <input type="radio" name="non_ecr" value="no"> No
+            </label><br>
+            <label>
+                Visible Distinguishing Mark: <input type="text" name="distinguishing_mark">
+            </label><br>
+            <label>
+                Aadhaar Number: <input type="text" name="aadhaar_number">
+            </label><br>
+        </fieldset>
+
+        <!-- Family Details Section -->
+        <fieldset>
+            <legend>3. Family Details</legend>
+            <label>
+                Father's Given Name: <input type="text" name="father_given_name" required>
+            </label><br>
+            <label>
+                Father's Surname: <input type="text" name="father_surname" required>
+            </label><br>
+            <label>
+                Mother's Given Name: <input type="text" name="mother_given_name" required>
+            </label><br>
+            <label>
+                Mother's Surname: <input type="text" name="mother_surname" required>
+            </label><br>
+            <label>
+                Legal Guardian's Given Name (If applicable): <input type="text" name="guardian_given_name">
+            </label><br>
+            <label>
+                Legal Guardian's Surname (If applicable): <input type="text" name="guardian_surname">
+            </label><br>
+            <label>
+                Spouse's Given Name: <input type="text" name="spouse_given_name">
+            </label><br>
+            <label>
+                Spouse's Surname: <input type="text" name="spouse_surname">
+            </label><br>
+        </fieldset>
+
+        <!-- Present Residential Address Section -->
+        <fieldset>
+            <legend>4. Present Residential Address</legend>
+            <label>
+                House No. and Street Name: <input type="text" name="house_street" required>
+            </label><br>
+            <label>
+                Village/Town/City: <input type="text" name="city" required>
+            </label><br>
+            <label>
+                State/UT: <input type="text" name="state_ut" required>
+            </label><br>
+            <label>
+                District: <input type="text" name="district" required>
+            </label><br>
+            <label>
+                Police Station: <input type="text" name="police_station" required>
+            </label><br>
+            <label>
+                PIN: <input type="text" name="pin" required>
+            </label><br>
+            <label>
+                Mobile Number: <input type="text" name="mobile" required>
+            </label><br>
+            <label>
+                Telephone Number: <input type="text" name="telephone">
+            </label><br>
+            <label>
+                Email ID: <input type="email" name="email">
+            </label><br>
+            <label>
+                Is your permanent address same as above?
+                <input type="radio" name="permanent_same" value="yes"> Yes
+                <input type="radio" name="permanent_same" value="no"> No
+            </label><br>
+        </fieldset>
+
+        <!-- Emergency Contact Section -->
+        <fieldset>
+            <legend>5. Emergency Contact</legend>
+            <label>
+                Name and Address: <input type="text" name="emergency_name_address" required>
+            </label><br>
+            <label>
+                Mobile Number: <input type="text" name="emergency_mobile" required>
+            </label><br>
+            <label>
+                Telephone Number: <input type="text" name="emergency_telephone">
+            </label><br>
+            <label>
+                Email ID: <input type="email" name="emergency_email">
+            </label><br>
+        </fieldset>
+
+        <!-- Previous Passport/ Application Details Section -->
+        <fieldset>
+            <legend>6. Previous Passport/ Application Details</legend>
+            <label>
+                Passport Number: <input type="text" name="passport_number" required>
+            </label><br>
+            <label>
+                Date of Issue: <input type="date" name="issue_date" required>
+            </label><br>
+            <label>
+                Place of Issue: <input type="text" name="issue_place" required>
+            </label><br>
+            <label>
+                File Number: <input type="text" name="file_number" required>
+            </label><br>
+            <label>
+                Have you ever applied for passport, but not issued?
+                <input type="radio" name="applied_not_issued" value="yes"> Yes
+                <input type="radio" name="applied_not_issued" value="no"> No
+            </label><br>
+        </fieldset>
+
+        <!-- Other Details Section -->
+        <fieldset>
+            <legend>7. Other Details</legend>
+            <label>
+                Have you ever been charged with criminal proceedings or any arrest warrant/ summon pending before a court of India?
+                <input type="radio" name="criminal_proceedings" value="yes"> Yes
+                <input type="radio" name="criminal_proceedings" value="no"> No
+            </label><br>
+            <label>
+                Have you at any time during the period of 5 years immediately preceding the date of this application been convicted by a court in India for any criminal offence and sentenced to imprisonment for two years or more?
+                <input type="radio" name="convicted" value="yes"> Yes
+                <input type="radio" name="convicted" value="no"> No
+            </label><br>
+            <label>
+                Have you ever been refused or denied passport?
+                <input type="radio" name="refused_denied_passport" value="yes"> Yes
+                <input type="radio" name="refused_denied_passport" value="no"> No
+            </label><br>
+            <label>
+                Has your passport ever been impounded or revoked?
+                <input type="radio" name="impounded_revoked" value="yes"> Yes
+                <input type="radio" name="impounded_revoked" value="no"> No
+            </label><br>
+            <label>
+                Have you ever applied for/ been granted political asylum to/ by any foreign country?
+                <input type="radio" name="political_asylum" value="yes"> Yes
+                <input type="radio" name="political_asylum" value="no"> No
+            </label><br>
+            <label>
+                Have you ever returned to India on Emergency Certificate (EC) or were ever deported or repatriated?
+                <input type="radio" name="deported_repatriated" value="yes"> Yes
+                <input type="radio" name="deported_repatriated" value="no"> No
+            </label><br>
+        </fieldset>
+
+        <!-- Self Declaration Section -->
+        <fieldset>
+            <legend>Self-Declaration</legend>
+            <div class="form-group">
+                <label for="declarationText">I hereby declare that:</label>
+                <textarea class="form-control" id="declarationText" name="declarationText" rows="5" readonly>
+1. I owe allegiance to the sovereignty, unity, and integrity of India, and have not voluntarily acquired the citizenship or travel document of another country.
+2. I have not been issued a passport or travel document before, or if issued, it is attached and there is no current or pending investigation against me.
+3. I have not been convicted by any court of law for any criminal offense, or if convicted, details are attached.
+4. No proceedings in respect of an offense alleged to have been committed by me are pending before a criminal court in India.
+5. No warrant or summons for my appearance, and no warrant for my arrest, has been issued by a court under any law in force in India.
+6. No valid court order prohibiting my departure from India is in force.
+7. No declaration of me as a proclaimed offender has been issued or subsists.
+8. I am not engaged in activities prejudicial to the sovereignty, unity, and integrity of India.
+9. I have not submitted any application for obtaining a passport under this or any other name.
+10. I solemnly affirm that the information given in this application is true and correct to the best of my knowledge and belief, and I am aware that it is an offense under the Passport Act, 1967, to furnish false information or suppress material information.
+                </textarea>
+            </div>
+            <div class="form-group">
+                <label for="signature">Upload Signature:</label>
+                <input type="file" class="form-control-file" id="signature" name="signature" required>
+            </div>
+            <div class="form-group">
+                <label for="declarationDate">Date:</label>
+                <input type="date" class="form-control" id="declarationDate" name="declarationDate" required>
+            </div>
+        </fieldset>
+
+        <!-- Submit and Reset Buttons -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-secondary">Reset</button>
+    </form>
+
+</body>
+</html>
