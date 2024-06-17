@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Passport Renewal Application Form</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -55,23 +59,23 @@
     
 
    
-    <div class="container mt-4">
+    <div class="container-fluid mt-4">
+
+        <p class="fs-2 text-center fw-bold">Passport Renewal Application Form</p>
+
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
 
 
-        <h1>Passport Renewal Application Form</h1>
-        <form>
+        
+        <form action="payment.html">
             <!-- Service Required Section -->
             <fieldset>
-                <legend>1. Service Required</legend>
-                <label>
-                    <input type="radio" name="service" value="fresh" required> Applying for Fresh Passport
-                </label>
-                <label>
-                    <input type="radio" name="service" value="reissue" required> Re-issue of Passport
-                </label>
+                <legend class="fw-bold  fs-3 my-3">Service Required</legend>
     
-                <p>If re-issue, specify reason(s):</p>
-                <select name="reason" required>
+                <p class="mt-3"> Re-issue, specify reason(s):</p>
+                <select name="reason" class="form-select" required>
                     <option value="validity_expired_within_3_years">Validity Expired within 3 years/ Due to Expire</option>
                     <option value="exhaustion_of_pages">Exhaustion of Pages</option>
                     <option value="validity_expired_more_than_3_years_ago">Validity Expired more than 3 years ago</option>
@@ -80,8 +84,8 @@
                     <option value="damaged_passport">Damaged Passport</option>
                 </select>
     
-                <p>If change in existing personal particulars, specify reason(s):</p>
-                <select name="change_reason" required>
+                <p class="mt-3">If change in existing personal particulars, specify reason(s):</p>
+                <select name="change_reason" class="form-select" required>
                     <option value="appearance">Appearance</option>
                     <option value="signature">Signature</option>
                     <option value="given_name">Given Name</option>
@@ -96,7 +100,7 @@
            
             
             <fieldset class="mb-4">
-                <legend>Type of Application:</legend>
+                <legend class="fw-bold  fs-3 my-3">Type of Application:</legend>
                 <div class="form-check">
                     <input type="radio" class="form-check-input" id="normal" name="application_type" value="Normal" required>
                     <label for="normal" class="form-check-label">Normal</label>
@@ -108,7 +112,7 @@
             </fieldset>
     
             <fieldset class="mb-4">
-                <legend>Type of Passport Booklet:</legend>
+                <legend class="fw-bold  fs-3 my-3">Type of Passport Booklet:</legend>
                 <div class="form-check">
                     <input type="radio" class="form-check-input" id="36_pages" name="booklet_type" value="36 Pages" required>
                     <label for="36_pages" class="form-check-label">36 Pages</label>
@@ -121,7 +125,7 @@
     
     
         <fieldset class="mb-4">
-            <Legend>Validity Required:</Legend>
+            <Legend class="fw-bold  fs-3 my-3">Validity Required:</Legend>
             <div class="form-check">
             <input type="radio" id="10_years"class="form-check-input" name="validity_required" value="10 Years" required>
             <label for="10_years" class="form-label">10 Years</label><br>
@@ -134,7 +138,7 @@
     
     
         <fieldset class="mb-4">
-            <legend>Applicant Details</legend>
+            <legend class="fw-bold  fs-3 my-3">Applicant Details</legend>
             <div class="mb-3">
                 <label for="given_name" class="form-label">Applicant's Given Name:</label>
                 <input type="text" class="form-control" id="given_name" name="given_name" required>
@@ -158,7 +162,7 @@
             </div>
     
             <div class="mb-3">
-                <label for="changed_name" class="form-label">Have you ever changed your name?</label><br>
+                <label for="changed_name"  class="form-label">Have you ever changed your name?</label><br>
                 <div class="form-check form-check-inline">
                     <input type="radio" class="form-check-input" id="changed_name_yes" name="changed_name" value="Yes" required>
                     <label for="changed_name_yes" class="form-check-label">Yes</label>
@@ -287,156 +291,162 @@
         </fieldset>
     
     
-        <fieldset class="border p-3 rounded">
-            <legend class="text-center">Family Details</legend>
-            <div class="row">
-              <div class="mb-3 col-md-6">
+        <fieldset>
+            <legend class="fw-bold  fs-3 my-3">Family Details</legend>
+          
+              <div class="mb-3">
                 <label for="father_name" class="form-label">Father's Given Name:</label>
                 <input type="text" class="form-control" id="father_name" name="father_name" required>
               </div>
-              <div class="mb-3 col-md-6">
+              <div class="mb-3">
                 <label for="father_surname" class="form-label">Father's Surname:</label>
                 <input type="text" class="form-control" id="father_surname" name="father_surname" required>
               </div>
-            </div>
-            <div class="row">
-              <div class="mb-3 col-md-6">
+            
+            
+              <div class="mb-3">
                 <label for="mother_name" class="form-label">Mother's Given Name:</label>
                 <input type="text" class="form-control" id="mother_name" name="mother_name" required>
               </div>
-              <div class="mb-3 col-md-6">
+              <div class="mb-3">
                 <label for="mother_surname" class="form-label">Mother's Surname:</label>
-                <div class="form-control" id="mother_surname" name="mother_surname" required>
-                </div>
+                <input type="text" class="form-control" id="mother_surname" name="mother_surname" required>
               </div>
-            </div>
+            
             <div class="mb-3">
               <label for="legal_guardian_name" class="form-label">Legal Guardian's Name (if applicable):</label>
               <input type="text" class="form-control" id="legal_guardian_name" name="legal_guardian_name">
             </div>
-            <div class="row">
-              <div class="mb-3 col-md-6">
+            
+              <div class="mb-3">
                 <label for="spouse_name" class="form-label">Spouse's Given Name (if married):</label>
                 <input type="text" class="form-control" id="spouse_name" name="spouse_name">
               </div>
-              <div class="mb-3 col-md-6">
+              <div class="mb-3">
                 <label for="spouse_surname" class="form-label">Spouse's Surname (if married):</label>
                 <input type="text" class="form-control" id="spouse_surname" name="spouse_surname">
               </div>
-            </div>
+           
           </fieldset>
           
     
     
         <fieldset>
     
-            <Legend> Address Details</Legend>
-            <label for="present_address" class="form-label">Present Residential Address:</label><br>
-            <input type="text" id="present_address" class="form-control" name="present_address" required><br><br>
+            <Legend class="fw-bold  fs-3 my-3"> Address Details</Legend>
+            <label for="present_address" class="form-label">Present Residential Address:</label>
+            <input type="text" id="present_address" class="form-control mb-3" name="present_address" required>
     
-            <label for="village_town_city" class="form-label">Village/ Town/ City:</label><br>
-            <input type="text" id="village_town_city"  class="form-control" name="village_town_city" required><br><br>
+            <label for="village_town_city" class="form-label">Village/ Town/ City:</label>
+            <input type="text" id="village_town_city"  class="form-control mb-3" name="village_town_city" required>
     
-            <label for="district" class="form-label">District:</label><br>
-            <input type="text" id="district" class="form-control" name="district" required><br><br>
+            <label for="district" class="form-label">District:</label>
+            <input type="text" id="district" class="form-control mb-3" name="district" required>
     
-            <label for="state_ut" class="form-label">State/ UT:</label><br>
-            <input type="text" id="state_ut" class="form-control" name="state_ut" required><br><br>
+            <label for="state_ut" class="form-label">State/ UT:</label>
+            <input type="text" id="state_ut" class="form-control mb-3" name="state_ut" required>
     
-            <label for="pincode" class="form-label">Pincode:</label><br>
-            <input type="text" id="pincode"  class="form-control" name="pincode" required><br><br>
+            <label for="pincode" class="form-label">Pincode:</label>
+            <input type="text" id="pincode"  class="form-control mb-3" name="pincode" required>
     
-            <label for="mobile_number" class="form-label">Mobile Number:</label><br>
-            <input type="text" id="mobile_number" class="form-control" name="mobile_number" required><br><br>
+            <label for="mobile_number" class="form-label">Mobile Number:</label>
+            <input type="text" id="mobile_number" class="form-control mb-3" name="mobile_number" required>
     
-            <label for="telephone_number" class="form-label">Telephone Number:</label><br>
-            <input type="text" id="telephone_number"  class="form-control" name="telephone_number"><br><br>
+            <label for="telephone_number" class="form-label">Telephone Number:</label>
+            <input type="text" id="telephone_number"  class="form-control mb-3" name="telephone_number">
     
-            <label for="email" class="form-label">Email:</label><br>
-            <input type="email" id="email" class="form-control"  name="email" required><br><br>
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" class="form-control mb-3"  name="email" required>
     
-            <label for="permanent_address" class="form-label">Is your permanent address same as above?</label><br>
-            <input type="radio" id="permanent_address_yes" name="permanent_address" value="Yes" required>
-            <label for="permanent_address_yes" class="form-label">Yes</label><br>
-            <input type="radio" id="permanent_address_no" name="permanent_address" value="No" required>
-            <label for="permanent_address_no" class="form-label">No</label><br><br>
+            <label for="permanent_address" class="form-label d-block">Is your permanent address same as above?</label>
+            <input type="radio" class="form-check-input"  id="permanent_address_yes" name="permanent_address" value="Yes" required>
+            <label for="permanent_address_yes" class="form-label">Yes</label>
+            <input type="radio" class="form-check-input"  id="permanent_address_no" name="permanent_address" value="No" required>
+            <label for="permanent_address_no" class="form-label mb-3">No</label>
     
-            <label for="emergency_contact_name" class="form-label">Emergency Contact Person's Name:</label><br>
-            <input type="text" id="emergency_contact_name" class="form-control" name="emergency_contact_name" required><br><br>
+            <label for="emergency_contact_name" class="form-label d-block">Emergency Contact Person's Name:</label>
+            <input type="text" id="emergency_contact_name" class="form-control mb-3" name="emergency_contact_name" required>
     
-            <label for="emergency_contact_number" class="form-label">Emergency Contact Number:</label><br>
-            <input type="text" id="emergency_contact_number" class="form-control" name="emergency_contact_number" required><br><br>
+            <label for="emergency_contact_number" class="form-label">Emergency Contact Number:</label>
+            <input type="text" id="emergency_contact_number" class="form-control mb-3" name="emergency_contact_number" required>
     
-            <label for="emergency_contact_address" class="form-label">Emergency Contact Address:</label><br>
-            <input type="text" id="emergency_contact_address" class="form-control" name="emergency_contact_address" required><br><br>
+            <label for="emergency_contact_address" class="form-label">Emergency Contact Address:</label>
+            <input type="text" id="emergency_contact_address" class="form-control mb-3" name="emergency_contact_address" required>
     
-            <label for="passport_number" class="form-label">Previous Passport Number (if applicable):</label><br>
-            <input type="text" id="passport_number" class="form-control" name="passport_number"><br><br>
+            <label for="passport_number" class="form-label">Previous Passport Number (if applicable):</label>
+            <input type="text" id="passport_number" class="form-control mb-3" name="passport_number">
     
-            <label for="passport_issue_date" class="form-label">Date of Issue (DD-MM-YYYY):</label><br>
-            <input type="text" id="passport_issue_date" class="form-control" name="passport_issue_date"><br><br>
+            <label for="passport_issue_date" class="form-label">Date of Issue (DD-MM-YYYY):</label>
+            <input type="text" id="passport_issue_date" class="form-control mb-3" name="passport_issue_date">
     
-            <label for="passport_issue_place" class="form-label">Place of Issue:</label><br>
-            <input type="text" id="passport_issue_place" class="form-control" name="passport_issue_place"><br><br>
+            <label for="passport_issue_place" class="form-label">Place of Issue:</label>
+            <input type="text" id="passport_issue_place" class="form-control mb-3" name="passport_issue_place">
     
         </fieldset>
 
 
            <!-- Previous Passport/ Application Details Section -->
            <fieldset>
-            <legend>6. Previous Passport/ Application Details</legend>
-            <label>
-                Passport Number: <input type="text" name="passport_number" required>
-            </label><br>
-            <label>
-                Date of Issue: <input type="date" name="issue_date" required>
-            </label><br>
-            <label>
-                Place of Issue: <input type="text" name="issue_place" required>
-            </label><br>
-            <label>
-                File Number: <input type="text" name="file_number" required>
-            </label><br>
-            <label>
-                Have you ever applied for passport, but not issued?
-                <input type="radio" name="applied_not_issued" value="yes"> Yes
-                <input type="radio" name="applied_not_issued" value="no"> No
-            </label><br>
+            <legend class="fw-bold  fs-3 my-3"> Previous Passport/ Application Details</legend>
+            <label class="form-label">
+                Passport Number 
+            </label>
+            <input type="text" class="form-control mb-3" name="passport_number" required>
+            <label class="form-label">
+                Date of Issue
+            </label>
+            <input type="date" class="form-control mb-3" name="issue_date" required>
+            
+            <label class="form-label">
+                Place of Issue 
+            </label>
+            <input type="text" class="form-control mb-3" name="issue_place" required>
+            
+            <label class="form-label">
+                File Number 
+            </label>
+            <input type="text" class="form-control mb-3" name="file_number" required>
+            
+            <label class="form-label d-block">
+                Have you ever applied for passport, but not issued?  
+            </label>
+            <input type="radio" class="form-check-input" name="applied_not_issued" value="yes"> Yes
+            <input type="radio" name="applied_not_issued" class="form-check-input mb-3" value="no"> No
         </fieldset>
     
     
     
     <fieldset>
-    <legend> Other Details</legend>
-    <label for="criminal_offence" class="form-label">Have you ever been charged with criminal offence?</label><br>
-    <input type="radio" id="criminal_offence_yes" name="criminal_offence" value="Yes" required>
-    <label for="criminal_offence_yes" class="form-label">Yes</label><br>
-    <input type="radio" id="criminal_offence_no" name="criminal_offence" value="No" required>
-    <label for="criminal_offence_no" class="form-label">No</label><br><br>
+    <legend class="fw-bold  fs-3 my-3"> Other Details</legend>
+    <label for="criminal_offence" class="form-label d-block">Have you ever been charged with criminal offence?</label>
+    <input type="radio" class="form-check-input"  id="criminal_offence_yes" name="criminal_offence" value="Yes" required>
+    <label for="criminal_offence_yes" class="form-labe">Yes</label>
+    <input type="radio" class="form-check-input"  id="criminal_offence_no" name="criminal_offence" value="No" required>
+    <label for="criminal_offence_no" class="form-label">No</label>
     
-    <label for="warrant" class="form-label">Is there any warrant or summons pending before a court under your name?</label><br>
-    <input type="radio" id="warrant_yes" name="warrant" value="Yes" required>
-    <label for="warrant_yes" class="form-label">Yes</label><br>
-    <input type="radio" id="warrant_no" name="warrant" value="No" required>
-    <label for="warrant_no" class="form-label">No</label><br><br>
+    <label for="warrant" class="form-label d-block">Is there any warrant or summons pending before a court under your name?</label>
+    <input type="radio" class="form-check-input"  id="warrant_yes" name="warrant" value="Yes" required>
+    <label for="warrant_yes" class="form-label">Yes</label>
+    <input type="radio" class="form-check-input"  id="warrant_no" name="warrant" value="No" required>
+    <label for="warrant_no" class="form-label">No</label>
     
-    <label for="impounded" class="form-label">Has your passport ever been impounded?</label><br>
-    <input type="radio" id="impounded_yes" name="impounded" value="Yes" required>
-    <label for="impounded_yes" class="form-label">Yes</label><br>
-    <input type="radio" id="impounded_no" name="impounded" value="No" required>
-    <label for="impounded_no" class="form-label">No</label><br><br>
+    <label for="impounded" class="form-label d-block">Has your passport ever been impounded?</label>
+    <input type="radio" class="form-check-input"  id="impounded_yes" name="impounded" value="Yes" required>
+    <label for="impounded_yes" class="form-label">Yes</label>
+    <input type="radio" class="form-check-input"  id="impounded_no" name="impounded" value="No" required>
+    <label for="impounded_no" class="form-label">No</label>
     
-    <label for="denied" class="form-label">Have you ever been denied passport?</label><br>
-    <input type="radio" id="denied_yes" name="denied" value="Yes" required>
-    <label for="denied_yes" class="form-label">Yes</label><br>
-    <input type="radio" id="denied_no" name="denied" value="No" required>
-    <label for="denied_no" class="form-label">No</label><br><br>
+    <label for="denied" class="form-label d-block">Have you ever been denied passport?</label>
+    <input type="radio" class="form-check-input"  id="denied_yes" name="denied" value="Yes" required>
+    <label for="denied_yes" class="form-label">Yes</label>
+    <input type="radio" class="form-check-input"  id="denied_no" name="denied" value="No" required>
+    <label for="denied_no" class="form-label">No</label>
     
-    <label for="revoked" class="form-label">Has your citizenship ever been revoked?</label><br>
-    <input type="radio" id="revoked_yes" name="revoked" value="Yes" required>
-    <label for="revoked_yes" class="form-label">Yes</label><br>
-    <input type="radio" id="revoked_no" name="revoked" value="No" required>
-    <label for="revoked_no" class="form-label">No</label><br><br>
+    <label for="revoked" class="form-label d-block">Has your citizenship ever been revoked?</label>
+    <input type="radio" class="form-check-input"  id="revoked_yes" name="revoked" value="Yes" required>
+    <label for="revoked_yes" class="form-label">Yes</label>
+    <input type="radio" class="form-check-input"  id="revoked_no" name="revoked" value="No" required>
+    <label for="revoked_no" class="form-label">No</label>
     
     </fieldset>
 
@@ -448,7 +458,7 @@
 
         <!-- Self Declaration Section -->
         <fieldset>
-            <legend>Self-Declaration</legend>
+            <legend class="fw-bold  fs-3 my-3">Self-Declaration</legend>
             <div class="form-group">
                 <label for="declarationText">I hereby declare that:</label>
                 <textarea class="form-control" id="declarationText" name="declarationText" rows="5" readonly>
@@ -464,31 +474,48 @@
 10. I solemnly affirm that the information given in this application is true and correct to the best of my knowledge and belief, and I am aware that it is an offense under the Passport Act, 1967, to furnish false information or suppress material information.
                 </textarea>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-3">
                 <label for="signature">Upload Signature:</label>
                 <input type="file" class="form-control-file" id="signature" name="signature" required>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-3">
                 <label for="declarationDate">Date:</label>
                 <input type="date" class="form-control" id="declarationDate" name="declarationDate" required>
             </div>
         </fieldset>
 
         <!-- Submit and Reset Buttons -->
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="reset" class="btn btn-secondary">Reset</button>
+
+        <div class="my-4">
+            <input type="submit"  class="btn btn-success" value="Apply">
+            <input type="reset"  class="btn btn-warning" value="Reset">
+            </div>
+
     </form>
 
+</div>
 
+<div class="col-md-1"></div>
+
+</div>
     
-    <footer class="bg-secondary text-center text-white">
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-12 bg-secondary text-center text-white">    
         
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-            <p>&copy;2024 Passport Application System. All rights reserved</p>
+        
+                
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+                <p>&copy;2024 Passport Application System. All rights reserved</p>
+                
+            </div>
             
+         
         </div>
-        
-      </footer>
+        </div>
+    </div>
 
 </body>
 </html>
