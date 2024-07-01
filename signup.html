@@ -39,7 +39,7 @@
 
 
                 <p class="fs-2 text-center">Sign Up</p>
-                <form action="home.html" method="post">
+                <form action="#" method="post">
                     <label for="name" class="form-label">Username:</label>
                     <input type="text" id="username" name="username" class="form-control mb-3" required
                         placeholder="first and last name">
@@ -68,7 +68,7 @@
                     <label for="consent" class="form-label">I am allowing to share my details with this
                         website.</label><br><br>
 
-                    <input type="submit" class="btn btn-success float-end mb-3" value="Register">
+                    <input type="submit" class="btn btn-success float-end mb-3" id="register" value="Register">
 
                     <p>Already have an Account? <a href="index.html">Login</a>
                     </p>
@@ -83,6 +83,12 @@
         </div>
 
     </div>
+
+    <script>
+        document.getElementById("register").addEventListener("click", () => {
+            window.location.href = 'home.html';
+        });
+    </script>
 
 </body>
 
